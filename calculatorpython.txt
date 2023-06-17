@@ -1,0 +1,92 @@
+import math
+print("  ___\t___\t___\tCALCULATOR\t___\t___\t___")
+oper=int(input("1 - Addition\n 2 - Subtraction\n 3 - Multiplication\n 4 - Division\n 5 - Remainder\n 6 - Power\n 7 - Sine\n 8 - Cosine\n 9 - Tangent\n 10 - Square root\n 11 - Natural logarithm\n 12 - Logarithm\n 13 - Exponent\n 14 - To degrees\n 15 - To radians\n 16 - Factorial\n  Enter the operation to be performed =  "))
+match oper:
+    case 1:
+        op1=int(input("op1 = "))
+        op2=int(input("op2 = "))
+        result=op1+op2
+        print("Result of the selected operation is "+str(result))
+        
+    case 2:
+        op1=int(input("op1 = "))
+        op2=int(input("op2 = "))
+        result=op1-op2
+        print("Result of the selected operation is "+str(result))
+        
+    case 3:
+        op1=int(input("op1 = "))
+        op2=int(input("op2 = "))
+        result=op1*op2
+        print("Result of the selected operation is "+str(result))
+        
+    case 4:
+        op1=int(input("op1 = "))
+        op2=int(input("op2 = "))
+        result=op1/op2
+        print("Result of the selected operation is "+str(result))
+        
+    case 5:
+        op1=int(input("op1 = "))
+        op2=int(input("op2 = "))
+        result=op1%op2
+        print("Result of the selected operation is "+str(result))
+        
+    case 6:
+        op1=int(input("base = "))
+        op2=int(input("exponent = "))
+        result=op1**op2
+        print("Result of the selected operation is "+str(result))
+        
+    case 7:
+        op1=int(input("Enter the angle in degrees = "))
+        result=math.sin(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 8:
+        op1=int(input("Enter the angle in degrees = "))
+        result=math.cos(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 9:
+        op1=int(input("Enter the angle in degrees = "))
+        result=math.tan(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 10:
+        op1=int(input("Enter a squared number to take root of it = "))
+        result=math.sqrt(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 11:
+        op1=int(input("op1 = "))
+        result=math.log(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 12:
+        op1=int(input("op1 = "))
+        result=math.log10(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 13:
+        op1=int(input("op1 = "))
+        result=math.exp(op1)
+        print("Result of the selected operation is "+str(result))
+    
+    case 14:
+        op1=int(input("Enter the angle in Radians = "))
+        result=math.degrees(op1)
+        print("Result of the selected operation is "+str(result)) 
+        
+    case 15:
+        op1=int(input("Enter the angle in radians = "))
+        result=math.radians(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 16:
+        op1=int(input("op1 = "))
+        result=math.factorial(op1)
+        print("Result of the selected operation is "+str(result))
+        
+    case 0:
+        print("Please select a valid operation!!!!!")
