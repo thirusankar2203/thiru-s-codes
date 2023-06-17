@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n,i,arr[100],res,j,sum;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&res);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i!=j)
+            {
+                sum=(arr[i]+arr[j]);
+                if(sum==res)
+                {
+                    printf("%d %d",i,j);
+                    flag=0;
+                    break;
+                }
+            }
+            
+        }
+        if(flag=0)
+        {
+            break;
+        }
+    }
+    
+    return 0;
+}
