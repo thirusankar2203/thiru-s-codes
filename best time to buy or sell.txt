@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n,arr[100],i,max,dif,min,x,y,j,arr1[100];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    min=arr[0];
+    for(i=0;i<n;i++)
+    {
+        if(min>arr[i])
+        {
+            min=arr[i];
+            x=i;
+        }
+    }
+    int z=0;
+    for(j=x;j<n;j++)
+    {
+        dif=arr[j]-min;
+        arr1[z]=dif;
+        z++;
+    }
+    max=0;
+    for(i=0;i<z;i++)
+    {
+        if(max<arr1[i])
+        {
+            max=arr1[i];
+        }
+    }
+    printf("%d",max);
+    
+    return 0;
+}
