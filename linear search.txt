@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int n,arr[100],l,i,flag=1,a=-1;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&l);
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==l)
+        {
+            printf("%d",i);
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+        printf("%d",a);
+    return 0;
+}
