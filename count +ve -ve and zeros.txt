@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main()
+{
+    int n,arr[100],i,x,count1=0,count2=0,count3=0;
+    int r1,r2,r3;
+    printf("Enter n : \n");
+    scanf("%d",&n);
+    printf("Enter the elements : \n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        int x1=arr[i];
+        int x2=abs(x1);
+        int sum=x1+x2;
+        if(x1==0)
+        count3++;
+        else if(sum==0)
+        count1++;
+        else if(sum>0)
+        count2++;
+        
+    }
+    printf("%d\t%d\t%d\t",count1,count2,count3);
+    
+}

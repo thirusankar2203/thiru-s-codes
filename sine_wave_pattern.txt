@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int row,col,arr[100][100],i,j=0;
+    scanf("%d %d",&row,&col);
+    for(i=0;i<row;i++)
+        for(j=0;j<col;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    j=-1;
+    for(i=0;i<col;i++)
+    {
+        if(j==-1)
+        {
+            for(j=0;j<row;j++)
+            {
+                printf("%d ",arr[j][i]);
+            }
+        }
+        else if(j==row)
+        {
+            for(j=(row-1);j>=0;j--)
+            {
+                printf("%d ",arr[j][i]);
+            }
+        }
+        
+    }
+    return 0;
+}
