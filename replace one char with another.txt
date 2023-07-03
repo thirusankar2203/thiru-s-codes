@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    char str[100],str1[10],str2[10];
+    char ch;
+    int n,i;
+    scanf("%s",str);
+    scanf("%s",str1);
+    scanf("%s",str2);
+    n=strlen(str);
+    for(i=0;i<n;i++)
+    {
+        if(str[i]==str1[0])
+        {
+            str[i]=str2[0];
+        }
+    }
+    printf("%s",str);
+    return 0;
+}

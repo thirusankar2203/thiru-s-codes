@@ -1,0 +1,7 @@
+string=input("")
+list=[]
+string1=''
+list=string.split()
+for i in list:
+    string1=string1+i
+print(string1)

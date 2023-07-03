@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int fact(int n)
+{
+    if(n==0)
+        return 1;
+    else
+        return n*fact(n-1);
+}
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int n,r;
+    scanf("%d",&n);
+    scanf("%d",&r);
+    int num=fact(n);
+    int den1=fact(r);
+    int den2=fact(n-r);
+    int out=num/(den1*den2);
+    printf("%d",out);
+    
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    char str[100];
+    int fi,li,n,flag=0;
+    scanf("%s",str);
+    n=strlen(str);
+    li=n-1;
+    fi=0;
+    while(fi<li)
+    {
+        if(str[fi]!=str[li])
+        {
+            printf("false");
+            flag=1;
+            break;
+        }
+        fi++;
+        li--;
+    }
+    if(flag==0)
+    {
+        printf("true");
+    }
+    
+    return 0;
+}

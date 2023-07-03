@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    char str[10];
+    int n,i,x,y;
+    scanf("%s",str);
+    n=strlen(str);
+    if(n==1)
+    {
+        x=str[0]-64;
+        
+        printf("%d",x);
+    }
+    else if(n==2)
+    {
+        x=str[n-1]-64;
+        y=26+x;
+        printf("%d",y);
+    }
+    else if(n>2)
+    {
+        x=str[n-1]-64;
+        y=(26*27)+x;
+        printf("%d",y);
+
+    }
+    return 0;
+}

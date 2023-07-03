@@ -1,0 +1,11 @@
+string=input("")
+list=[]
+y=''
+min=100
+list=string.split()
+for i in list:
+    x=len(i)
+    if(x<min):
+        min=x
+        y=i
+print(y)

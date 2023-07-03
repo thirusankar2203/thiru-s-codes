@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int a,b,k,sum=0,rem,i;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    sum=pow(a,b);
+    scanf("%d",&k);
+    for(i=0;i<k;i++)
+    {
+        rem=sum%10;
+        sum=sum/10;
+    }
+    printf("%d",rem);
+    return 0;
+}
