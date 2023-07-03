@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    int arr[100],freq[100],n,i,j,k=0,l,count,flag=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        count=0;
+        for(j=0;j<k;j++)
+        {
+            if(arr[i]==freq[j])
+            {
+                flag=1;
+                break;
+            }
+            else
+            {
+                flag=0;
+            }
+        }
+        if(flag==1)
+        {
+            continue;   
+        }
+        
+        else
+        {
+            for(l=0;l<n;l++)
+            {
+                if(arr[i]==arr[l])
+                {
+                    count++;
+                }
+            }
+            printf("Frequency of element %d is %d\n",arr[i],count);
+            freq[k]=arr[i];
+            k++;
+        }
+    }
+    
+}

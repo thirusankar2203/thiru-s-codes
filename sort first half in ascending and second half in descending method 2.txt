@@ -1,0 +1,43 @@
+#include <stdio.h>
+int arr[100],i,j,n,mid;
+int ascendingorder(int arr[],int a,int b)
+{
+    int temp;
+    for (int i = a; i < b; i++) {     
+        for (int j = i+1; j < b; j++) {     
+            if(arr[i] > arr[j]) {    
+                temp = arr[i];    
+                arr[i] = arr[j];    
+                arr[j] = temp;    
+            }     
+        }     
+    }
+}
+int descendingorder(int arr[],int a,int b)
+{
+    int temp;
+    for (int i = a; i < b; i++) {     
+        for (int j = i+1; j < b; j++) {     
+            if(arr[i] < arr[j]) {    
+                temp = arr[i];    
+                arr[i] = arr[j];    
+                arr[j] = temp;    
+            }     
+        }     
+    } 
+}
+int main()
+{
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    mid=n/2;
+    ascendingorder(arr,0,n);
+    descendingorder(arr,mid,n);
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+}
