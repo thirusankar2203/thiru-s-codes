@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+    int arr[100],a=0,b=1,i=0,n;
+    arr[0]=b;
+    for(i=1;i<100;i++)
+    {
+        arr[i]=a+b;
+        a=b;
+        b=arr[i];
+    }
+    scanf("%d",&n);
+    printf("The %d th fibonacci number is %d",n,arr[n-1]);
+}

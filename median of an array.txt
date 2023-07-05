@@ -1,0 +1,60 @@
+#include <stdlib.h>
+#include<stdio.h>
+int arr[100];
+int asc_sorting(int arr[],int n)
+{
+    int i,j,temp;
+    float median;
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    if(n%2==1)
+    {
+        median=arr[n/2];
+        printf("\nThe median is %f",median);
+    }
+    else
+    {
+        float median1=arr[n/2];
+        float median2=arr[(n/2)-1];
+        median=(median1+median2)/2;
+        printf("\nThe median is %f",median);
+    }
+}
+
+int main() 
+{
+    int arr1[100],arr2[100],n1,n2,i,j;
+    scanf("%d",&n1);
+    scanf("%d",&n2);
+    for(i=0;i<n1;i++)
+    {
+        scanf("%d",&arr1[i]);
+    }
+    for(i=0;i<n2;i++)
+    {
+        scanf("%d",&arr2[i]);
+    }
+    j=0;
+    for(i=n1;i<n1+n2;i++)
+    {
+        arr1[i]=arr2[j];
+        j++;
+    }
+    int n=n1+n2;
+    asc_sorting(arr1,n);
+    return 0;
+}

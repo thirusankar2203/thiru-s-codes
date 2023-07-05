@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100],str1[50][50]={"break","case","continue","default","defer","else","for","func","goto","map","if","range","return","struct","type","var"};
+    scanf("%s",str);
+    int flag=0,i;
+    for(i=0;i<16;i++)
+    {
+        int x=strcmp(str,str1[i]);
+        if(x==0)
+        {
+            printf("The eneteredword is used as an keyword !!!!!\n");
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        printf("Not a keyword!!!!!");
+    }
+    
+}
