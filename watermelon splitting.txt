@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    if(n%2==0)
+    printf("YES\n");
+    else
+    printf("NO\n");
+    for(i=1;i<=n/2;i++)
+    {
+        int x=n%i;
+        if(x%2==0 && i%2==0)
+        {
+            printf("%d %d\n",i,n-i);
+        }
+    }
+}
