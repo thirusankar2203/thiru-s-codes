@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100],str1[100],ch;
+    int arr[100],counts[100],n,i,j,k=0,a,flag=1,x;
+    scanf("%s",str);
+    n=strlen(str);
+    for(i=0;i<n;i++)
+    {
+        int count=0;
+        for(j=0;j<k;j++)
+        {
+            if(str[i]==str1[j])
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==0)
+        {
+            flag=1;
+            continue;
+        }
+        else
+        {
+            for(a=0;a<n;a++)
+            {
+                if(str[i]==str[a])
+                {
+                    count++;
+                }
+            }
+            str1[k]=str[i];
+            counts[k]=count;
+            k++;
+        }
+    }
+    flag=0;
+    for(i=0;i<k;i++)
+    {
+        ch=str1[i];
+        x=ch-96;
+        if(x!=counts[i])
+        {
+            flag=1;
+        }
+    }
+    if(flag==0)
+    printf("Yes");
+    else
+    printf("No");
+}

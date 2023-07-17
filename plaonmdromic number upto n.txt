@@ -1,0 +1,32 @@
+#include<stdio.h>
+int pali(int n)
+{
+    int rem=0,rev=0,temp=n,flag=0;
+    while(n>0)
+    {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    if(temp==rev)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int main()
+{
+    int x,i;
+    scanf("%d",&x);
+    for(i=1;i<x;i++)
+    {
+        int out=pali(i);
+        if(out==1)
+        {
+            printf("%d ",i);
+        }
+    }
+}
