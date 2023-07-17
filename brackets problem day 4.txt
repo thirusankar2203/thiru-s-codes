@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100],ch,count1=0,count2=0,count3=0,count4=0,count5=0,count6=0;
+    int n,i;
+    scanf("%s",str);
+    n=strlen(str);
+    for(i=0;i<n;i++)
+    {
+        ch=str[i];
+        if(ch=='(')
+        {
+            count1++;
+        }
+        else if(ch==')')
+        {
+            count2++;
+        }
+        else if(ch=='{')
+        {
+            count3++;
+        }
+        else if(ch=='}')
+        {
+            count4++;
+        }
+        else if(ch=='[')
+        {
+            count5++;
+        }
+        else if(ch==']')
+        {
+            count6++;
+        }
+        else
+        {
+            printf("String must contain only brackets .....");
+            break;
+        }
+    }
+    if(count1==count2 && count3==count4 && count5==count6)
+    {
+        printf("true");
+    }
+    else
+    {
+        printf("false");
+    }
+}

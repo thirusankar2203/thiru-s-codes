@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int n,arr[100],i,flag=0,diff,max=0,j;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[j]>arr[i])
+            {
+                diff=arr[j]-arr[i];
+                if(diff>max)
+                {
+                    max=diff;
+                }
+                flag=1;
+            }
+        }
+    }
+    if(flag==0)
+    {
+        printf("UNFIT");
+    }
+    else
+    {
+        printf("%d",max);
+    }
+}
